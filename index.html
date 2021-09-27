@@ -16,21 +16,32 @@
     <title>TurnApp</title>
   </head>
   <body>
-    <header>
-        <div class="bg-dark py-5">
-
-        </div>
-      <nav class="navbar navbar-expand-md navbar-light bg-white">
+    <header class="container-fluid text-center">
+        <!-- barra de datos Turn-app -->
+        <section class=" row bg-dark text-light py-2  ">
+            <div class="col-lg-8 col-md-8 col-sm-12 px-2 d-flex align-items-center ">
+                <p class="d-inline px-3">Email: prueba@turnapp.com </p>
+                <p class="d-inline px-3">Télefono: 381-5642520 </p>
+              </div>
+              <div class=" text-light col-lg-4 col-md-4 col-sm-12 py-2"> 
+                  <img src="img/logo_turn_top.png" class="px-3 " alt="logo de web  ">
+                    <i class="fab fa-facebook-square fa-2x px-2"></i>
+                      <i class="fab fa-twitter-square fa-2x px-2"></i>
+                      <i class="fab fa-instagram fa-2x px-2"></i>
+              </div>
+        </section>
+    
+      <nav class="navbar navbar-expand-md navbar-light bg-white ">
         <div class="container">
           <a class="navbar-brand" href="index.html">
             <img
-              src="img/landing_logo_turnapp_header.png " width="" height="" class=""
+              src="img/landing_logo_turnapp_header.png " width="auto" height="30px" class=""
               alt="imagen del logo para nav"
               width="90px"
             />
           </a>
           <button
-            class="navbar-toggler"
+            class="navbar-toggler my-2"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navBarPlantilla"
@@ -57,21 +68,69 @@
               <li class="nav-item active">
                 <a class="nav-link" href="">Contacto</a>
               </li>
+              <li class="nav-item px-1 mx-2 ">
+                <button class="btn bg-warning text-dark" type="submit" data-bs-toggle="modal"
+                  data-bs-target="#inicioSesion">
+                  Iniciar Sesión
+                </button>
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <main class="container">
-        <div >
-            <img src="img/back_header.png" class="w-100
-            " alt="imagen de fondo titulo">
+    <main >
+        <div>
+            <img src="img/back_header.png" class="w-100" alt="imagen de fondo titulo">
+        </div>         
+            <div class="container-fluid">        
         </div>
   <div >
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam sint magni harum consequatur illo dicta saepe minus. Nulla, cum consequatur.</p></div>
     </main>
+    <!-- Modal -->
+  <div class="modal fade" id="inicioSesion" tabindex="-1" aria-labelledby="inicioSesion" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen-xl-down">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title " id="inicioSesion">Suscripción</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="row g-4">
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <label for="validationServerUsername" class="form-label">Usuario</label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                <input type="text" class="form-control" id="validationServerUsername" placeholder="tucu10"
+                  aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" maxlength="10" required>
+              </div>
+            </div>           
+            <div class="col-md-6 col-lg-6 col-sm-12">
+              <label for="validationServer06" class="form-label">Contraseña</label>
+              <input type="text" class="form-control" id="validationServer06" placeholder="*******"
+                aria-describedby="validationServer06Feedback" minlength="6" maxlength="30" required>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck3"
+                  aria-describedby="invalidCheck3Feedback" required>
+                <label class="form-check-label" for="invalidCheck3">
+                  Estoy de acuerdo con los términos y condiciones.
+                </label>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn bg-warning text-dark text-center" type="submit">Iniciar Sesión</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
     <footer class=" container-fluid text-center">
-      <section class=" row bg-dark text-light py-4 px-5">
+      <section class=" row bg-dark text-light py-2 px-5">
         <div class="col-lg-4 col-md-4 col-sm-12 py-2 imgFooter">
           <a class="navbar-brand" href="index.html">
             <img
@@ -110,7 +169,7 @@
         </div>
         <div >
            <hr>		
-            <label class="text-center" style="display: block;">
+            <label class="text-center py-2" style="display: block;">
             Copyright © 2021. Todos los derechos.</label>	
         </div>
           </section>
